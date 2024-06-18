@@ -6,8 +6,9 @@ from time import sleep
 @pytest.fixture()
 def set_up_browser():
     options = ChromeOptions()
-    options.headless = True
+    options.page_load_strategy = 'none' #статус ожидания. none - без ожидания, normal - по умолчанию
     driver = webdriver.Chrome(options=options)
+    driver.implicitly_wait(30)  #ожидание в сек. 30 сек будет загружаться
     yield driver
     sleep(5)
     driver.quit()
