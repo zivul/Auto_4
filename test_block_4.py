@@ -40,7 +40,7 @@ class TestExemple():
         left_button_slider = driver.find_element(By.XPATH, "//div[@aria-valuetext='1']")
         right_button_slider = driver.find_element(By.XPATH, "//div[@aria-valuetext='24']")
         action_chains.click_and_hold(left_button_slider).move_by_offset(16, 0).perform()
-        action_chains.click_and_hold(right_button_slider).move_by_offset(-50, 0).pause(1).perform()
+        action_chains.click_and_hold(right_button_slider).move_by_offset(-34, 0).pause(1).perform()
         driver.find_element(By.XPATH, "//span[@class='ui-checkbox-field__value ui-checkbox-field__value--small']")\
         .click()
 
